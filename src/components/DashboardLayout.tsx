@@ -47,6 +47,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         <div className="flex items-center gap-2">
           <NavLink to="/" icon={<LayoutDashboard className="h-4 w-4" />} mobile>Dashboard</NavLink>
           <NavLink to="/chat" icon={<MessageSquare className="h-4 w-4" />} mobile>Chat</NavLink>
+          <NavLink to="/timetable" icon={<Calendar className="h-4 w-4" />} mobile>Timetable</NavLink>
           <Button variant="ghost" size="icon" onClick={signOut}>
             <LogOut className="h-4 w-4" />
           </Button>
