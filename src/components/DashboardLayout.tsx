@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
-import { Brain, LayoutDashboard, MessageSquare, Calendar, ClipboardList, LogOut } from "lucide-react";
+import { Brain, LayoutDashboard, MessageSquare, Calendar, ClipboardList, BookOpen, LogOut } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
