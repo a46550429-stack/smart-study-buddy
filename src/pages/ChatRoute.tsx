@@ -1,9 +1,9 @@
 import { useAuth } from "@/contexts/AuthContext";
-import AuthPage from "./AuthPage";
-import Dashboard from "./Dashboard";
+import { Navigate } from "react-router-dom";
+import ChatPage from "./ChatPage";
 import DashboardLayout from "@/components/DashboardLayout";
 
-export default function Index() {
+export default function ChatRoute() {
   const { user, loading } = useAuth();
 
   if (loading) {
@@ -14,11 +14,11 @@ export default function Index() {
     );
   }
 
-  if (!user) return <AuthPage />;
+  if (!user) return <Navigate to="/" replace />;
 
   return (
     <DashboardLayout>
-      <Dashboard />
+      <ChatPage />
     </DashboardLayout>
   );
 }
