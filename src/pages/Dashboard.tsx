@@ -41,7 +41,7 @@ export default function Dashboard() {
   const quickActions = [
     { title: "AI Chat", description: "Ask your AI assistant anything", icon: MessageSquare, to: "/chat", color: "bg-primary" },
     { title: "Timetable", description: "Manage your schedule", icon: Calendar, to: "/timetable", color: "bg-accent" },
-    { title: "Deadlines", description: "Coming soon", icon: ClipboardList, to: "/", color: "bg-warning" },
+    { title: "Deadlines", description: "Track due dates", icon: ClipboardList, to: "/deadlines", color: "bg-warning" },
     { title: "Resources", description: "Coming soon", icon: BookOpen, to: "/", color: "bg-success" },
   ];
 
