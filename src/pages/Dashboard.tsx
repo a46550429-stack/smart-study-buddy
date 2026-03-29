@@ -42,7 +42,7 @@ export default function Dashboard() {
     { title: "AI Chat", description: "Ask your AI assistant anything", icon: MessageSquare, to: "/chat", color: "bg-primary" },
     { title: "Timetable", description: "Manage your schedule", icon: Calendar, to: "/timetable", color: "bg-accent" },
     { title: "Deadlines", description: "Track due dates", icon: ClipboardList, to: "/deadlines", color: "bg-warning" },
-    { title: "Resources", description: "Coming soon", icon: BookOpen, to: "/", color: "bg-success" },
+    { title: "Resources", description: "Study materials", icon: BookOpen, to: "/resources", color: "bg-success" },
   ];
 
   return (

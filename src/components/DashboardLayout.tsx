@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
-import { Brain, LayoutDashboard, MessageSquare, Calendar, ClipboardList, LogOut } from "lucide-react";
+import { Brain, LayoutDashboard, MessageSquare, Calendar, ClipboardList, BookOpen, LogOut } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
@@ -23,6 +23,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           <NavLink to="/chat" icon={<MessageSquare className="h-4 w-4" />}>AI Chat</NavLink>
           <NavLink to="/timetable" icon={<Calendar className="h-4 w-4" />}>Timetable</NavLink>
           <NavLink to="/deadlines" icon={<ClipboardList className="h-4 w-4" />}>Deadlines</NavLink>
+          <NavLink to="/resources" icon={<BookOpen className="h-4 w-4" />}>Resources</NavLink>
         </nav>
 
         <div className="p-3">
@@ -50,6 +51,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           <NavLink to="/chat" icon={<MessageSquare className="h-4 w-4" />} mobile>Chat</NavLink>
           <NavLink to="/timetable" icon={<Calendar className="h-4 w-4" />} mobile>Timetable</NavLink>
           <NavLink to="/deadlines" icon={<ClipboardList className="h-4 w-4" />} mobile>Deadlines</NavLink>
+          <NavLink to="/resources" icon={<BookOpen className="h-4 w-4" />} mobile>Resources</NavLink>
           <Button variant="ghost" size="icon" onClick={signOut}>
             <LogOut className="h-4 w-4" />
           </Button>
