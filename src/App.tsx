@@ -9,6 +9,7 @@ import ChatRoute from "./pages/ChatRoute";
 import TimetablePage from "./pages/TimetablePage";
 import DeadlinesPage from "./pages/DeadlinesPage";
 import ResourcesPage from "./pages/ResourcesPage";
+import StudyGroupsPage from "./pages/StudyGroupsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
