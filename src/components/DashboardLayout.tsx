@@ -3,6 +3,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Brain, LayoutDashboard, MessageSquare, Calendar, ClipboardList, BookOpen, Users, LogOut } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import NotificationBell from "@/components/NotificationBell";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   const { signOut } = useAuth();
