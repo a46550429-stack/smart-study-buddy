@@ -3,6 +3,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Brain, LayoutDashboard, MessageSquare, Calendar, ClipboardList, BookOpen, Users, LogOut } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import NotificationBell from "@/components/NotificationBell";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   const { signOut } = useAuth();
@@ -27,7 +28,11 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           <NavLink to="/groups" icon={<Users className="h-4 w-4" />}>Study Groups</NavLink>
         </nav>
 
-        <div className="p-3">
+        <div className="p-3 space-y-1">
+          <div className="flex items-center justify-between px-3 py-1">
+            <span className="text-xs text-sidebar-foreground/50">Alerts</span>
+            <NotificationBell />
+          </div>
           <Button
             variant="ghost"
             className="w-full justify-start text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent"
@@ -47,7 +52,8 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           </div>
           <span className="font-display font-semibold">Smart Assist</span>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
+          <NotificationBell />
           <NavLink to="/" icon={<LayoutDashboard className="h-4 w-4" />} mobile>Dashboard</NavLink>
           <NavLink to="/chat" icon={<MessageSquare className="h-4 w-4" />} mobile>Chat</NavLink>
           <NavLink to="/timetable" icon={<Calendar className="h-4 w-4" />} mobile>Timetable</NavLink>
