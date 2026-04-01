@@ -53,6 +53,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           <NavLink to="/timetable" icon={<Calendar className="h-4 w-4" />} mobile>Timetable</NavLink>
           <NavLink to="/deadlines" icon={<ClipboardList className="h-4 w-4" />} mobile>Deadlines</NavLink>
           <NavLink to="/resources" icon={<BookOpen className="h-4 w-4" />} mobile>Resources</NavLink>
+          <NavLink to="/groups" icon={<Users className="h-4 w-4" />} mobile>Groups</NavLink>
           <Button variant="ghost" size="icon" onClick={signOut}>
             <LogOut className="h-4 w-4" />
           </Button>

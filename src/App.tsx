@@ -27,6 +27,7 @@ const App = () => (
             <Route path="/timetable" element={<TimetablePage />} />
             <Route path="/deadlines" element={<DeadlinesPage />} />
             <Route path="/resources" element={<ResourcesPage />} />
+            <Route path="/groups" element={<StudyGroupsPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
