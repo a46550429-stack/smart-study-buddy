@@ -42,7 +42,7 @@ export default function NotificationBell() {
   useEffect(() => {
     if (!user) return;
     const channel = supabase
-      .channel("user-notifications")
+      .channel(`user-notifications-${user.id}`)
       .on(
         "postgres_changes",
         { event: "INSERT", schema: "public", table: "notifications", filter: `user_id=eq.${user.id}` },
