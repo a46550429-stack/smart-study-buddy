@@ -52,11 +52,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signOut = async () => {
+    // Always clear local state first to ensure immediate UI redirect
+    setSession(null);
+    setUser(null);
+    // Then attempt server-side sign out; use 'local' scope as fallback
     const { error } = await supabase.auth.signOut();
     if (error) {
-      // Force local cleanup even if remote sign-out fails (e.g. stale refresh token)
-      setSession(null);
-      setUser(null);
+      await supabase.auth.signOut({ scope: 'local' });
     }
   };
 
